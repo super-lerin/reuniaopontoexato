@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tópicos Criativos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .topic-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .topic-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .topic-item:nth-child(1) { animation-delay: 0.1s; }
+        .topic-item:nth-child(2) { animation-delay: 0.2s; }
+        .topic-item:nth-child(3) { animation-delay: 0.3s; }
+        .topic-item:nth-child(4) { animation-delay: 0.4s; }
+        .topic-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .topic-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .topic-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .topic-content {
+            flex: 1;
+        }
+
+        .topic-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .topic-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .topic-arrow {
+            font-size: 1.5rem;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .topic-item:hover .topic-arrow {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .topic-item {
+                padding: 20px;
+            }
+            
+            .topic-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Meus Tópicos</h1>
+        <ul class="topic-list">
+            <li class="topic-item">
+                <div class="topic-icon">🌐</div>
+                <div class="topic-content">
+                    <div class="topic-title">Site</div>
+                    <div class="topic-description">Desenvolvimento e manutenção do site</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-icon">📱</div>
+                <div class="topic-content">
+                    <div class="topic-title">Apps</div>
+                    <div class="topic-description">Aplicativos e soluções mobile</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-icon">💼</div>
+                <div class="topic-content">
+                    <div class="topic-title">Apresentar Projeto de Criação de Sites</div>
+                    <div class="topic-description">Proposta e planejamento de novos sites</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-icon">🤝</div>
+                <div class="topic-content">
+                    <div class="topic-title">Indicação de Trabalho para Celio</div>
+                    <div class="topic-description">Referências e oportunidades profissionais</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </li>
+            <li class="topic-item">
+                <div class="topic-icon">📞</div>
+                <div class="topic-content">
+                    <div class="topic-title">Telefones</div>
+                    <div class="topic-description">Contatos e números importantes</div>
+                </div>
+                <div class="topic-arrow">→</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
